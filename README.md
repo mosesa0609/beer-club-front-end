@@ -1,1 +1,1 @@
-# beer-club
+# Beer Club
