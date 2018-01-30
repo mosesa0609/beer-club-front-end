@@ -19,6 +19,7 @@ class Landing extends Component {
             <Button waves='light' className='centered-landing-btn'>Get A Pint Today!</Button>
           </div>
         </Parallax>
+
         <div className='#bdbdbd grey lighten-1' style={{height: 80}} />
 
         {/* Current image is being used as a placeholder. A designed image will be needed for this section */}
@@ -32,6 +33,7 @@ class Landing extends Component {
             </div>
           </div>
         </Parallax>
+
       </div>
     )
   }
