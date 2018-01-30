@@ -54,13 +54,13 @@ class ShoppingCart extends Component {
             shipping: 0,
             orderTotal: 0 
         }
-        render() {
-            return(
-                <div>
+    }
+    render() {
+        return(
+            <div>
                     
-                </div>
-            )
-        }
+            </div>
+        )
     }
 }
 
