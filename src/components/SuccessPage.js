@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Card, Col } from 'react-materialize'
-import './SuccessPage.css'
+import './styles/SuccessPage.css'
 
 class SuccessPage extends Component {
   render () {
