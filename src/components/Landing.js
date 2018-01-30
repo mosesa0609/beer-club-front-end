@@ -33,7 +33,6 @@ class Landing extends Component {
             </div>
           </div>
         </Parallax>
-
       </div>
     )
   }

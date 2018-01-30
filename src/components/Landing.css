@@ -10,3 +10,10 @@
   left: 50%;
   transform: translate(-50%, 600%);
 }
+
+.carousel {
+  margin: auto;
+  width: 50%;
+  flex-direction: row;
+  display: flex;
+}
