@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Header from '../src/components/Header'
 import Footers from '../src/components/Footer'
-import Landing from '../src/components/Landing'
+// import Landing from '../src/components/Landing'
+import Shop from '../src/components/Shop'
 // import './App.css';
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
           <Header />
         </header>
         <main>
-          <Landing />
+          <Shop />
         </main>
         <footer>
           <Footers />
