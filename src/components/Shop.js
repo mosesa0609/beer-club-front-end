@@ -1,71 +1,77 @@
 import React, {Component} from 'react'
 import { Card, CardTitle, Button } from 'react-materialize'
+import axios from 'axios'
 // import requestDBC from '../../src/request'
 
 class Shop extends Component {
   constructor (props) {
-    super()
+    super(props)
     this.state = {
       beers: [
-        {
-          name: 'Belgian Golden Strong Ale',
-          price: 7,
-          brewery: 'Lazy Boy Brewing Company',
-          abv: 9.3,
-          style: 'something here',
-          img: 'https://i.imgur.com/sDjjBdi.png'
-        },
-        {
-          name: '3rd Stone Apricot Sour Ale',
-          price: 7,
-          brewery: 'Union Craft Brewing Company',
-          abv: 5.5,
-          style: 'something here',
-          img: 'https://i.imgur.com/S2SXqLn.png'
-        },
-        {
-          name: 'Almanac Golden Gates Gose',
-          price: 7,
-          brewery: 'Almanac Beer Co',
-          abv: 5,
-          style: 'something here',
-          img: 'https://i.imgur.com/7wC8RUG.png'
-        },
-        {
-          name: 'Belgian Golden Strong Ale',
-          price: 7,
-          brewery: 'Lazy Boy Brewing Company',
-          abv: 9.3,
-          style: 'something here',
-          img: 'https://i.imgur.com/sDjjBdi.png'
-        },
-        {
-          name: '3rd Stone Apricot Sour Ale',
-          price: 7,
-          brewery: 'Union Craft Brewing Company',
-          abv: 5.5,
-          style: 'something here',
-          img: 'https://i.imgur.com/S2SXqLn.png'
-        },
-        {
-          name: 'Almanac Golden Gates Gose',
-          price: 7,
-          brewery: 'Almanac Beer Co',
-          abv: 5,
-          style: 'something here',
-          img: 'https://i.imgur.com/7wC8RUG.png'
-        }
+        // {
+        //   name: 'Belgian Golden Strong Ale',
+        //   price: 7,
+        //   brewery: 'Lazy Boy Brewing Company',
+        //   abv: 9.3,
+        //   style: 'something here',
+        //   img: 'https://i.imgur.com/sDjjBdi.png'
+        // },
+        // {
+        //   name: '3rd Stone Apricot Sour Ale',
+        //   price: 7,
+        //   brewery: 'Union Craft Brewing Company',
+        //   abv: 5.5,
+        //   style: 'something here',
+        //   img: 'https://i.imgur.com/S2SXqLn.png'
+        // },
+        // {
+        //   name: 'Almanac Golden Gates Gose',
+        //   price: 7,
+        //   brewery: 'Almanac Beer Co',
+        //   abv: 5,
+        //   style: 'something here',
+        //   img: 'https://i.imgur.com/7wC8RUG.png'
+        // },
+        // {
+        //   name: 'Belgian Golden Strong Ale',
+        //   price: 7,
+        //   brewery: 'Lazy Boy Brewing Company',
+        //   abv: 9.3,
+        //   style: 'something here',
+        //   img: 'https://i.imgur.com/sDjjBdi.png'
+        // },
+        // {
+        //   name: '3rd Stone Apricot Sour Ale',
+        //   price: 7,
+        //   brewery: 'Union Craft Brewing Company',
+        //   abv: 5.5,
+        //   style: 'something here',
+        //   img: 'https://i.imgur.com/S2SXqLn.png'
+        // },
+        // {
+        //   name: 'Almanac Golden Gates Gose',
+        //   price: 7,
+        //   brewery: 'Almanac Beer Co',
+        //   abv: 5,
+        //   style: 'something here',
+        //   img: 'https://i.imgur.com/7wC8RUG.png'
+        // }
       ]
     }
   }
 
-  // componentDidMount () {
-  //   pokeRequest.then(response => this.setState({pokemon: response.data}))
-  //   .catch(err => console.log(err))
-  // }
+  componentDidMount () {
+    axios
+      .get(`http://localhost:4000/search/bud`)
+      .then(res => {
+        const beers = res.body.map(obj => obj.data)
+        this.setState({ beers })
+      })
+  }
 
   render () {
     let beer = this.state.beers.map((beer, index) => {
+      console.log(beer.body)
       return (
         // <div key={index + 1} className='card col m4'>
         //   <div className='card-image waves-effect waves-block waves-light'>

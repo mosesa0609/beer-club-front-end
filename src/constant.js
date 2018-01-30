@@ -1,1 +1,1 @@
-export const DBC_URL = 'data URL goes here'
+export const DBC_URL = 'http://localhost:4000/'
