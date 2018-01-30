@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Card, CardTitle, Button } from 'react-materialize'
-// import pokeRequest from '../../request'
+// import requestDBC from '../../src/request'
 
 class Shop extends Component {
   constructor (props) {
@@ -72,12 +72,17 @@ class Shop extends Component {
         //     <img className='activator' src={beer.img} />
         //     {/* <a class='btn-floating halfway-fab waves-effect waves-light red'><i className='material-icons'>add</i></a> */}
         //   </div>
-        <Card className='card hoverable col s3' horizontal header={<CardTitle image={beer.img} waves='light' />}>
-          <Button floating large className='red hoverable right' waves='light' icon='add' />
-          <h5>${beer.price}</h5> <h5>{beer.name}</h5>
-          <h6>Brewed By: {beer.brewery}</h6>
-          <h6>Brew Style: {beer.style}</h6>
-          <h6>ABV: {beer.abv}</h6>
+        <Card className='card hoverable col s12 m3' header={<CardTitle reveal image={beer.img} waves='light' />} title={<h5 className='' style={{fontSize: 20}}> {beer.name}</h5>}
+          reveal={[
+            <div>
+              <h4>${beer.price}</h4>
+              <h5>Brewed By: {beer.brewery}</h5>
+              <h5>Brew Style: {beer.style}</h5>
+              <h5>ABV: {beer.abv}</h5>
+            </div>
+          ]}>
+          <Button floating className='red hoverable halfway-fab' waves='light' icon='add' style={{position: 'absolute', bottom: 90, right: 8}} />
+
         </Card>
 
       )
