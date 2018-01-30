@@ -8,54 +8,54 @@ class Shop extends Component {
     super(props)
     this.state = {
       beers: [
-        // {
-        //   name: 'Belgian Golden Strong Ale',
-        //   price: 7,
-        //   brewery: 'Lazy Boy Brewing Company',
-        //   abv: 9.3,
-        //   style: 'something here',
-        //   img: 'https://i.imgur.com/sDjjBdi.png'
-        // },
-        // {
-        //   name: '3rd Stone Apricot Sour Ale',
-        //   price: 7,
-        //   brewery: 'Union Craft Brewing Company',
-        //   abv: 5.5,
-        //   style: 'something here',
-        //   img: 'https://i.imgur.com/S2SXqLn.png'
-        // },
-        // {
-        //   name: 'Almanac Golden Gates Gose',
-        //   price: 7,
-        //   brewery: 'Almanac Beer Co',
-        //   abv: 5,
-        //   style: 'something here',
-        //   img: 'https://i.imgur.com/7wC8RUG.png'
-        // },
-        // {
-        //   name: 'Belgian Golden Strong Ale',
-        //   price: 7,
-        //   brewery: 'Lazy Boy Brewing Company',
-        //   abv: 9.3,
-        //   style: 'something here',
-        //   img: 'https://i.imgur.com/sDjjBdi.png'
-        // },
-        // {
-        //   name: '3rd Stone Apricot Sour Ale',
-        //   price: 7,
-        //   brewery: 'Union Craft Brewing Company',
-        //   abv: 5.5,
-        //   style: 'something here',
-        //   img: 'https://i.imgur.com/S2SXqLn.png'
-        // },
-        // {
-        //   name: 'Almanac Golden Gates Gose',
-        //   price: 7,
-        //   brewery: 'Almanac Beer Co',
-        //   abv: 5,
-        //   style: 'something here',
-        //   img: 'https://i.imgur.com/7wC8RUG.png'
-        // }
+        {
+          name: 'Belgian Golden Strong Ale',
+          price: 7,
+          brewery: 'Lazy Boy Brewing Company',
+          abv: 9.3,
+          style: 'something here',
+          img: 'https://i.imgur.com/sDjjBdi.png'
+        },
+        {
+          name: '3rd Stone Apricot Sour Ale',
+          price: 7,
+          brewery: 'Union Craft Brewing Company',
+          abv: 5.5,
+          style: 'something here',
+          img: 'https://i.imgur.com/S2SXqLn.png'
+        },
+        {
+          name: 'Almanac Golden Gates Gose',
+          price: 7,
+          brewery: 'Almanac Beer Co',
+          abv: 5,
+          style: 'something here',
+          img: 'https://i.imgur.com/7wC8RUG.png'
+        },
+        {
+          name: 'Belgian Golden Strong Ale',
+          price: 7,
+          brewery: 'Lazy Boy Brewing Company',
+          abv: 9.3,
+          style: 'something here',
+          img: 'https://i.imgur.com/sDjjBdi.png'
+        },
+        {
+          name: '3rd Stone Apricot Sour Ale',
+          price: 7,
+          brewery: 'Union Craft Brewing Company',
+          abv: 5.5,
+          style: 'something here',
+          img: 'https://i.imgur.com/S2SXqLn.png'
+        },
+        {
+          name: 'Almanac Golden Gates Gose',
+          price: 7,
+          brewery: 'Almanac Beer Co',
+          abv: 5,
+          style: 'something here',
+          img: 'https://i.imgur.com/7wC8RUG.png'
+        }
       ]
     }
   }

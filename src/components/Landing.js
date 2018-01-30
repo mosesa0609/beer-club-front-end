@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Parallax } from 'react-parallax'
 import { Button } from 'react-materialize'
+import {Link} from 'react-router-dom'
 import './Landing.css'
 
 class Landing extends Component {
@@ -16,7 +17,7 @@ class Landing extends Component {
             <div className='white-text' style={{paddingLeft: 400, paddingRight: 400, textAlign: 'justify', fontSize: 16}}>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <Button waves='light' className='centered-landing-btn'>Get A Pint Today!</Button>
+            <Button waves='light' className='centered-landing-btn white'><Link to='/shop'>Get A Pint Today!</Link></Button>
           </div>
         </Parallax>
 
