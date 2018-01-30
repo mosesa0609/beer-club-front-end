@@ -4,12 +4,9 @@
 
 .receipt-container {
   text-align: center;
-  border: 3px solid black;
-  border-radius: 25px;
-  padding-top: 10px;
+  padding-top: 30px;
   margin: auto;
   width: 50%;
-  border: 1px solid black;
 }
 
 p {

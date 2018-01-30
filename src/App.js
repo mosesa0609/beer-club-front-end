@@ -3,6 +3,7 @@ import Header from '../src/components/Header'
 import Footers from '../src/components/Footer'
 import Landing from '../src/components/Landing'
 import ShoppingCart from '../src/components/ShoppingCart'
+import SuccessPage from './components/SuccessPage'
 
 // import './App.css';
 
@@ -14,6 +15,7 @@ class App extends Component {
           <Header />
         </header>
         <main>
+          <SuccessPage />
           <Landing />
         </main>
         <footer>

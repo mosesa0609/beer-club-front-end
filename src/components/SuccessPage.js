@@ -5,20 +5,21 @@ import './SuccessPage.css'
 class SuccessPage extends Component {
   render () {
     return (
-      <div className='component-container'>
-        <div className='receipt-container'>
+      <div className='receipt-container'>
+        <Card className='#ffca28 amber lighten-5' actions={[<a href='/'>Back to Shopping</a>]}>
           <h3>Order Summary</h3>
           <div className='individual-item'>
-            <p>Item</p>
-            <p>Quantity</p>
-            <p>Shipping Method</p>
-            <p>Shipping cost</p>
-            <p>Total</p>
+            <p>Order Number: #90000383838</p>
+            <p>Item: Almanac Golden Gates Gose</p>
+            <p>Quantity: 5</p>
+            <p>Shipping Method: UPS Ground</p>
+            <p>Shipping cost: $7.99</p>
+            <p>Total: $45.14</p>
           </div>
           <div className='total-order'>
-            <p>Order Total</p>
+            <p>Order Total: $45.14</p>
           </div>
-        </div>
+        </Card>
       </div>
     )
   }
