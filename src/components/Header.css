@@ -4,3 +4,6 @@
   left: 62%;
   transform: translate(-50%, -50%);
 }
+.page-header {
+  background: #757163 !important;
+}
