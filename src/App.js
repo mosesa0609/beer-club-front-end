@@ -15,8 +15,7 @@ class App extends Component {
           <Header />
         </header>
         <main>
-          <Billing />
-          {/* <Landing /> */}
+          <Landing />
         </main>
         <footer>
           <Footers />
