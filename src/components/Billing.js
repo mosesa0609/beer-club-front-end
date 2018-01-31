@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card, Button, Row, Input } from 'react-materialize'
-import './Billing.css'
+import '../styles/Billing.css'
 // probably need Router to switch to next page in process
 
 class Billing extends Component {
