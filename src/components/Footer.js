@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Footer} from 'react-materialize'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import './Footer.css'
 
 class Footers extends Component {
@@ -33,7 +33,7 @@ class Footers extends Component {
 }
         className=''
 >
-        <h5 className='white-text change'><Link to=''>Dollar Beer Club</Link></h5>
+        <h5 className='white-text change'>Dollar Beer Club</h5>
         <p className='grey-text text-lighten-4'>Brief information about Dollar Beer Club. When it was establish blah blah blah...</p>
       </Footer>
       </div>

@@ -8,7 +8,7 @@ class Shop extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      dummyPic: 'https://i.imgur.com/S2SXqLn.png',
+      dummyPic: 'https://stamandtrade.com/wp-content/uploads/2017/03/no-image-available.jpg',
       searchResults: [
         // {
         //   name: 'Belgian Golden Strong Ale',
