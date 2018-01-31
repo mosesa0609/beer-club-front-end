@@ -3,9 +3,6 @@ import { Card, CardTitle, Button } from 'react-materialize'
 import axios from 'axios'
 // import requestDBC from '../../src/request'
 
-import Header from './Header'
-import Footer from './Footer'
-
 class Shop extends Component {
   constructor (props) {
     super(props)
@@ -81,22 +78,18 @@ class Shop extends Component {
         //     <img className='activator' src={beer.img} />
         //     {/* <a class='btn-floating halfway-fab waves-effect waves-light red'><i className='material-icons'>add</i></a> */}
         //   </div>
-        <div>
-          <Header />
-          <Card className='card hoverable col s12 m3' header={<CardTitle reveal image={beer.img} waves='light' />} title={<h5 className='' style={{fontSize: 20}}> {beer.name}</h5>}
-            reveal={[
-              <div>
-                <h4>${beer.price}</h4>
-                <h5>Brewed By: {beer.brewery}</h5>
-                <h5>Brew Style: {beer.style}</h5>
-                <h5>ABV: {beer.abv}</h5>
-              </div>
-            ]}>
-            <Button floating className='red hoverable halfway-fab' waves='light' icon='add' style={{position: 'absolute', bottom: 90, right: 8}} />
+        <Card className='card hoverable col s12 m3' header={<CardTitle reveal image={beer.img} waves='light' />} title={<h5 className='' style={{fontSize: 20}}> {beer.name}</h5>}
+          reveal={[
+            <div>
+              <h4>${beer.price}</h4>
+              <h5>Brewed By: {beer.brewery}</h5>
+              <h5>Brew Style: {beer.style}</h5>
+              <h5>ABV: {beer.abv}</h5>
+            </div>
+          ]}>
+          <Button floating className='red hoverable halfway-fab' waves='light' icon='add' style={{position: 'absolute', bottom: 90, right: 8}} />
 
-          </Card>
-          <Footer />
-        </div>
+        </Card>
 
       )
     })
