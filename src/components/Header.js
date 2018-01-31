@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Navbar, NavItem} from 'react-materialize'
 import {BrowserRouter as Router, Route, Link, Redirect, Switch} from 'react-router-dom'
-import './Header.css'
+import '../styles/Header.css'
 import Landing from './Landing'
 import Shop from './Shop'
 
