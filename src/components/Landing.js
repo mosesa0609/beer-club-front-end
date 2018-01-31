@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Parallax } from 'react-parallax'
 import { Button } from 'react-materialize'
-import './styles/Landing.css'
+import '../styles/Landing.css'
 
 class Landing extends Component {
   render () {
