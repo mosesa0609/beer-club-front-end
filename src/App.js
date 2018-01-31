@@ -12,7 +12,7 @@ class App extends Component {
           <Header />
         </header>
         <main>
-          {/* <ShoppingCart /> */}
+          <ShoppingCart />
         </main>
         <footer>
           <Footers />
