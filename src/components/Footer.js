@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {Footer} from 'react-materialize'
-// import {Link} from 'react-router-dom'
-import './Footer.css'
+import '../styles/Footer.css'
 
 class Footers extends Component {
   twitterLink (e) {

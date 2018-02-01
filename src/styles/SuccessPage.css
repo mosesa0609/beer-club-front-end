@@ -1,0 +1,14 @@
+.component-container {
+  padding-top: 40px;
+}
+
+.receipt-container {
+  text-align: center;
+  padding-top: 30px;
+  margin: auto;
+  width: 50%;
+}
+
+p {
+  font-size: 20px;
+}

@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import {Navbar, NavItem} from 'react-materialize'
 import {BrowserRouter as Router, Route, Link, Redirect, Switch} from 'react-router-dom'
-import './Header.css'
+import '../styles/Header.css'
 import Landing from './Landing'
 import Shop from './Shop'
+import Register from './Register'
 // import InitialSearch from '../src/components/InitialSearch'
 
 // import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
@@ -65,7 +66,7 @@ class Header extends Component {
               <Switch>
                 <Route path='/shop' component={Shop} />
                 <Route path='/logon' component={Shop} />
-                <Route path='/register' component={Shop} />
+                <Route path='/register' component={Register} />
                 <Route path='/' component={Landing} />
               </Switch>
             </div>
