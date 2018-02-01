@@ -41,11 +41,11 @@ class Shop extends Component {
   render () {
     return (
       <div>
-        if (this.state.hasSearched) {
+        {/* if (this.state.hasSearched) {
           <Results />
         }
           <Search />
-        }
+        } */}
       </div>
     )
   }
