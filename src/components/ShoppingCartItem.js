@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
-import { CardTitle, Card, Button } from 'react-materialize'
+import { CardTitle, Card, Button, Input } from 'react-materialize'
 import '../styles/ShoppingCartItem.css'
+import ToggleDisplay from 'react-toggle-display'
 
 class ShoppingCartItem extends Component {
   constructor (props) {
     super(props)
+    this.state = { show: false }
+  }
+
+  handleClick () {
+    this.setState({
+      show: !this.state.show
+    })
   }
 
   // onClick () {
@@ -26,9 +34,11 @@ class ShoppingCartItem extends Component {
           title={<h5
             className=''
             style={{fontSize: 20}}> {itemName}   |   Quantity: {itemQuantity}   |   Subtotal: ${itemPrice * itemQuantity}</h5>}>
-          <Button onClick={this.onClick} floating className='red hoverable halfway-fab' waves='light' icon='add' style={{position: 'absolute', bottom: 90, right: 8}} />
-          <Button floating className='red hoverable halfway-fab' waves='light' icon='remove' style={{position: 'absolute', bottom: 90, left: 8}} />
-
+          <ToggleDisplay show={this.state.show}>
+            <Input type='number' />
+            <Button onClick={() => this.handleClick()} type='submit' >Change Quantity</Button>
+          </ToggleDisplay>
+          <Button onClick={() => this.handleClick()} floating className='red hoverable halfway-fab' waves='light' value='update order' style={{position: 'absolute', bottom: 90, right: 8}} >Update Order</Button>
         </Card>
 
       </div>

@@ -30,9 +30,14 @@ class ShoppingCart extends Component {
     }
   }
 
-//   addItem () {
-//     this.setState({ ...this.state, bQt: this.state.cartItems.bQt + 1 })
-//   }
+  updateQuantity (quantity, index) {
+    let oldItems = this.state.cartItems.slice()
+    let item = oldItems[index]
+    item.quantity = item.bQt + quantity < 0 ? 0 : item.bQt + quantity
+    this.setState({
+      cartItems: oldItems
+    })
+  }
 
   calculateTotal () {
     let newTotal = this.state.cartItems.forEach((beer, index) => {
