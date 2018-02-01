@@ -6,13 +6,39 @@ import ToggleDisplay from 'react-toggle-display'
 class ShoppingCartItem extends Component {
   constructor (props) {
     super(props)
-    this.state = { show: false }
+
+    this.state = {
+      show: false,
+      inputValue: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
   }
+
+// set value of input to this.state.inputValue
+// make function to handle change of state of the inputValue
+// create function in ShoppingCart to update item quantity
+// pass down function from shopping cart
+// call function in handleUpdateClick
+// call axios request to modify DB
 
   handleClick () {
     this.setState({
       show: !this.state.show
     })
+  }
+
+  handleChange (e) {
+    this.setState({
+      inputValue: e.target.value
+    })
+  }
+
+  handleUpdateClick (e) {
+    this.setState({
+      show: !this.state.show
+    })
+    console.log(e)
+    this.props.onUpdate(e, this.props.index, this.state.inputValue)
   }
 
   // onClick () {
@@ -35,8 +61,8 @@ class ShoppingCartItem extends Component {
             className=''
             style={{fontSize: 20}}> {itemName}   |   Quantity: {itemQuantity}   |   Subtotal: ${itemPrice * itemQuantity}</h5>}>
           <ToggleDisplay show={this.state.show}>
-            <Input type='number' />
-            <Button onClick={() => this.handleClick()} type='submit' >Change Quantity</Button>
+            <Input type='number' onChange={this.handleChange} />
+            <Button onClick={e => this.handleUpdateClick(e)} type='submit' >Change Quantity</Button>
           </ToggleDisplay>
           <Button onClick={() => this.handleClick()} floating className='red hoverable halfway-fab' waves='light' value='update order' style={{position: 'absolute', bottom: 90, right: 8}} >Update Order</Button>
         </Card>

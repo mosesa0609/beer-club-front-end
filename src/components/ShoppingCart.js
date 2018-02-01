@@ -30,15 +30,6 @@ class ShoppingCart extends Component {
     }
   }
 
-  updateQuantity (quantity, index) {
-    let oldItems = this.state.cartItems.slice()
-    let item = oldItems[index]
-    item.quantity = item.bQt + quantity < 0 ? 0 : item.bQt + quantity
-    this.setState({
-      cartItems: oldItems
-    })
-  }
-
   calculateTotal () {
     let newTotal = this.state.cartItems.forEach((beer, index) => {
       this.state.orderTotal += beer.bQt * beer.bPrice
@@ -53,11 +44,22 @@ class ShoppingCart extends Component {
     this.calculateTotal()
     console.log(this.state.orderTotal)
   }
+
+  updateQuantity (e, currentIndex, newQt) {
+    console.log(e, currentIndex)
+    this.setState(prevState => ({
+      cartItems: prevState.cartItems.map((item, idx) => {
+        if (idx === currentIndex) item.bQt = newQt
+        return item
+      })
+    }))
+  }
+
   //
   render () {
     let beers = this.state.cartItems.map((beer, index) => {
       return (
-        <ShoppingCartItem beer={beer} key={index} />
+        <ShoppingCartItem onUpdate={this.updateQuantity.bind(this)} beer={beer} key={index} index={index} />
       )
     })
     return (
