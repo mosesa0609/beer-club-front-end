@@ -5,11 +5,23 @@ import '../styles/Header.css'
 import Landing from './Landing'
 import Shop from './Shop'
 import Register from './Register'
+import Container from './Container'
 // import InitialSearch from '../src/components/InitialSearch'
 
 // import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
 class Header extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      search: ''
+    }
+    this.updateSearchTerm = this.updateSearchTerm.bind(this)
+  }
+
+  updateSearchTerm = (search) => {
+    this.setState({search})
+  }
   // constructor (props) {
   //   super(props)
   //   this.state = {
@@ -17,23 +29,23 @@ class Header extends Component {
   //   }
   // }
 
-  constructor (props) {
-    super(props)
-    this.state = {
-      search: '',
-      searchedResults: {}
-    }
-  }
+  // constructor (props) {
+  //   super(props)
+  //   this.state = {
+  //     search: '',
+  //     searchedResults: {}
+  //   }
+  // }
 
-  handleSearch (e) {
-    this.setState({
-      search: e.target.value
-    })
-  }
+  // handleSearch (e) {
+  //   this.setState({
+  //     search: e.target.value
+  //   })
+  // }
 
-  searchedContent (e) {
-    e.preventDefault()
-  }
+  // searchedContent (e) {
+  //   e.preventDefault()
+  // }
 
   render () {
     return (
@@ -42,19 +54,7 @@ class Header extends Component {
           <div>
             <div>
               <Navbar className='page-header' brand='Dollar Beer Club' right style={{height: 120}}>
-
-                <div className='nav-wrapper search-bar'>
-                  <form style={{height: 50}} className='' action='/' method='post' onSubmit={this.onSubmitQuery}>
-                    <div className='input-field'>
-                      <input id='search' type='search' placeholder="How 'bout a beer?" value={this.props.query} onChange={this.handleSearchInput} name='beerName' required />
-                      <label className='label-icon' for='search'>
-                        <i className='material-icons'>search</i>
-                      </label>
-                      <i className='material-icons'>close</i>
-                    </div>
-                  </form>
-                </div>
-
+                <Container />
                 <NavItem href='#'><div className=''><Link to='/'>Sign In</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/register'>Sign Up</Link></div></NavItem>
                 <NavItem href='#'><div className=''>About</div></NavItem>
@@ -67,6 +67,7 @@ class Header extends Component {
                 <Route path='/shop' component={Shop} />
                 <Route path='/logon' component={Shop} />
                 <Route path='/register' component={Register} />
+                {/* <Route path='/search/:name' component={Shop} /> */}
                 <Route path='/' component={Landing} />
               </Switch>
             </div>
