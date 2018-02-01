@@ -41,7 +41,7 @@ class Header extends Component {
         <Router>
           <div>
             <div>
-              <Navbar className='#ffca28 amber lighten-1' brand='Dollar Beer Club' right>
+              <Navbar className='page-header' brand='Dollar Beer Club' right>
                 {/* <div className='waves-effect waves-light btn #ff8f00 amber darken-3 centered-header'><Link to='/shop'>Get A Pint Today!</Link></div> */}
                 <NavItem href='#'><div className=''><Link to='/logon'>Sign In</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/register'>Sign Up</Link></div></NavItem>
