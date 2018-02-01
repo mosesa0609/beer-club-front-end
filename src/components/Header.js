@@ -40,16 +40,20 @@ class Header extends Component {
         <Router>
           <div>
             <div>
-              <Navbar className='page-header' brand='Dollar Beer Club' right>
-                <div class='nav-wrapper'>
-                  <form>
-                    <div class='input-field'>
-                      <input id='search' type='search' onChange={(e) => this.handleSearch(e)} required />
-                      <label class='label-icon' for='search'><i class='material-icons'>search</i></label>
-                      <i class='material-icons'>close</i>
+              <Navbar className='page-header' brand='Dollar Beer Club' right style={{height: 120}}>
+
+                <div className='nav-wrapper search-bar'>
+                  <form style={{height: 50}} className='' action='/' method='post' onSubmit={this.onSubmitQuery}>
+                    <div className='input-field'>
+                      <input id='search' type='search' placeholder="How 'bout a beer?" value={this.props.query} onChange={this.handleSearchInput} name='beerName' required />
+                      <label className='label-icon' for='search'>
+                        <i className='material-icons'>search</i>
+                      </label>
+                      <i className='material-icons'>close</i>
                     </div>
                   </form>
                 </div>
+
                 <NavItem href='#'><div className=''><Link to='/'>Sign In</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/register'>Sign Up</Link></div></NavItem>
                 <NavItem href='#'><div className=''>About</div></NavItem>
