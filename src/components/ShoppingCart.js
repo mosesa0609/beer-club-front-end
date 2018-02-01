@@ -1,15 +1,16 @@
 // Need to add react-router-dom
-
+import uuid from 'uuid'
 import React, {Component} from 'react'
 import Shipping from './Shipping'
 import Billing from './Billing'
+import ShoppingCartItem from './ShoppingCartItem'
 // import Cart from './Cart'
 
 class ShoppingCart extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      beers: [
+      cartItems: [
 
         {
           'bName': '3rd Stone Apricot Sour Ale',
@@ -24,12 +25,17 @@ class ShoppingCart extends Component {
           'bPic': 'https://i.imgur.com/7wC8RUG.png'
         }
       ],
-      orderTotal: 0
+      orderTotal: 0,
+      orderNumber: uuid.v4()
     }
   }
 
+//   addItem () {
+//     this.setState({ ...this.state, bQt: this.state.cartItems.bQt + 1 })
+//   }
+
   calculateTotal () {
-    let newTotal = this.state.beers.forEach((beer, index) => {
+    let newTotal = this.state.cartItems.forEach((beer, index) => {
       this.state.orderTotal += beer.bQt * beer.bPrice
     //   console.log(newTotal)
     })
@@ -44,20 +50,14 @@ class ShoppingCart extends Component {
   }
   //
   render () {
-    let beers = this.state.beers
+    let beers = this.state.cartItems.map((beer, index) => {
+      return (
+        <ShoppingCartItem beer={beer} key={index} />
+      )
+    })
     return (
       <div>
-        {
-            beers.map((beer, index) => {
-              return <li key={index}>
-                <div>
-                  <h5>{beer.bName}</h5>
-                  <p>${beer.bPrice * beer.bQt}</p>
-                  <img src={`${beer.bPic}`} />
-                </div>
-              </li>
-            })
-          }
+        <div>{beers}</div>
         <Billing />
         <Shipping />
       </div>
