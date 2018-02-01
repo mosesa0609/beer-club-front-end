@@ -21,7 +21,7 @@ class Results extends Component {
 
   //     })
   // }
-
+  
   render () {
     let {searchResults} = this.props
     let beerKeg = searchResults.map((beer, index) => {
@@ -42,8 +42,10 @@ class Results extends Component {
     })
     return (
       <div>
+        
+        {/* <Button waves='light' className='centered-landing-btn white'onClick={this.onSearchAgain}>Search For Another</Button> */}
       <div className='row'>
-      <Button waves='light' className='centered-landing-btn white'onClick={this.onSearchAgain}>Search For Another</Button>
+      <input type='button' onClick={window.location.reload()} value='Search For Another' />
         {beerKeg}
       </div>
       </div>

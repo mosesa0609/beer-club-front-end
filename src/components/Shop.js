@@ -5,10 +5,10 @@ import Container from './Container'
 class Shop extends Component {
   render () {
     return (
-      <div style={{height: 500}}>
+      <div >
         <div>
-        <Container />
-      </div>
+          <Container />
+        </div>
       </div>
     )
   }
