@@ -31,10 +31,10 @@ class ShoppingCart extends Component {
     }
   }
 
-  componentWillMount () {
-    let incomingItems = this.queryCart()
-    this.setState = ({cartItems: incomingItems})
-  }
+  // componentWillMount () {
+  //   let incomingItems = this.queryCart()
+  //   this.setState = ({cartItems: incomingItems})
+  // }
 
   calculateTotal () {
     // let newTotal = 0
