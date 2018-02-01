@@ -13,7 +13,10 @@ class Results extends Component {
   onSearchAgain = () => {
     this.props.onSearchAgain()
   }
-
+  reloadApp(e) {
+    window.location.reload(true);
+    e.preventDefault();
+}
   // componentDidMount = () => {
   // axios
   //     .get()
@@ -45,7 +48,7 @@ class Results extends Component {
         
         {/* <Button waves='light' className='centered-landing-btn white'onClick={this.onSearchAgain}>Search For Another</Button> */}
       <div className='row'>
-      <input type='button' onClick={window.location.reload()} value='Search For Another' />
+      <Button type='button' onClick={this.reloadApp}>Search For Another</Button>
         {beerKeg}
       </div>
       </div>
