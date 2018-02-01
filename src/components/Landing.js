@@ -3,6 +3,7 @@ import { Parallax } from 'react-parallax'
 import { Button } from 'react-materialize'
 import '../styles/Landing.css'
 import {Link} from 'react-router-dom'
+import Container from './Container'
 
 class Landing extends Component {
   render () {

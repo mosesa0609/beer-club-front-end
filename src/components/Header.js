@@ -54,7 +54,7 @@ class Header extends Component {
           <div>
             <div>
               <Navbar className='page-header' brand='Dollar Beer Club' right style={{height: 120}}>
-                <Container />
+                {/* <Container /> */}
                 <NavItem href='#'><div className=''><Link to='/'>Sign In</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/register'>Sign Up</Link></div></NavItem>
                 <NavItem href='#'><div className=''>About</div></NavItem>
