@@ -1,7 +1,23 @@
-.login-container {
-    width: 50%;
-    margin: auto;
-    padding-top: 25px;
-    padding-bottom: 150px;
-  }
-  
+.bgImg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://static.pexels.com/photos/684386/pexels-photo-684386.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.border {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  transform: translate(90%, 45%);
+  width: 500px;
+  height: 280px;
+  background: #757163 !important
+}
+
+.login-button {
+  background: #757163 !important
+}
