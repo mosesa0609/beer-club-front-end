@@ -41,8 +41,11 @@ class Results extends Component {
     )
     })
     return (
+      <div>
       <div className='row'>
+      <Button waves='light' className='centered-landing-btn white'onClick={this.onSearchAgain}>Search For Another</Button>
         {beerKeg}
+      </div>
       </div>
     )
   }

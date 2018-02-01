@@ -37,7 +37,7 @@ class Search extends Component {
   render () {
     return (
       <div>
-        <div className='nav-wrapper search-bar'>
+        <div className='nav-wrapper '>
           <form style={{height: 50}} className='' onSubmit={this.onSubmitQuery}>
             <div className='input-field'>
               <input id='search' type='search' placeholder="HOW 'BOUT A BEER?" value={this.props.query} onChange={this.handleSearchInput} name='beerName' />
