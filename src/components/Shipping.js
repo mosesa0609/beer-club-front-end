@@ -1,23 +1,30 @@
 import React, {Component} from 'react'
 
 class Shipping extends Component {
-    render() {
-        return(
-            <div>
-                <h3>Shipping Info</h3>
-                <form action="/" method="post">
-                <input type="text" name="First Name" placeholder="First Name" />
-                <input type="text" name="Last Name" placeholder="Last Name" />
-                <input type="text" name="Address" placeholder="Address" />
-                <input type="text" name="Address Line 2" placeholder="Address (Cont)" />
-                <input type="text" name="City" placeholder="City" />
-                <input type="text" name="State" placeholder="State" />
-                <input type="number" name="Zip Code" placeholder="Zip Code" />
-                <input type="number" name="Phone Number" placeholder="Phone Number" />
-                </form>
+  render () {
+    return (
+      <div class='row'>
+        <form class='col s4'>
+          <div class='row'>
+            <div class='input-field col s6'>
+              <input placeholder='Placeholder' id='first_name' type='text' class='validate' />
+              <label for='first_name'>First Name</label>
             </div>
-        )
-    }
+            <div class='input-field col s6'>
+              <input id='last_name' type='text' class='validate' />
+              <label for='last_name'>Last Name</label>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='input-field col s12'>
+              <input id='email' type='email' class='validate' />
+              <label for='email'>Email</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    )
+  }
 }
 
 export default Shipping

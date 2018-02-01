@@ -5,6 +5,7 @@ import Shipping from './Shipping'
 import Billing from './Billing'
 import ShoppingCartItem from './ShoppingCartItem'
 // import Cart from './Cart'
+import Utils from './Utils'
 
 class ShoppingCart extends Component {
   constructor (props) {
@@ -14,13 +15,13 @@ class ShoppingCart extends Component {
 
         {
           'bName': '3rd Stone Apricot Sour Ale',
-          'bQt': '4',
+          'bQt': '1',
           'bPrice': 7,
           'bPic': 'https://i.imgur.com/S2SXqLn.png'
         },
         {
           'bName': 'Almanac Golden Gates Gose',
-          'bQt': '3',
+          'bQt': '1',
           'bPrice': 7,
           'bPic': 'https://i.imgur.com/7wC8RUG.png'
         }
@@ -28,6 +29,11 @@ class ShoppingCart extends Component {
       orderTotal: 0,
       orderNumber: uuid.v4()
     }
+  }
+
+  componentWillMount () {
+    let incomingItems = this.queryCart()
+    this.setState = ({cartItems: incomingItems})
   }
 
   calculateTotal () {
