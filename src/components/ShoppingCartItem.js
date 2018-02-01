@@ -37,7 +37,7 @@ class ShoppingCartItem extends Component {
     this.setState({
       show: !this.state.show
     })
-    console.log(e)
+    console.log('handleUpdate in item', this.props.index, this.state.inputValue)
     this.props.onUpdate(e, this.props.index, this.state.inputValue)
   }
 
