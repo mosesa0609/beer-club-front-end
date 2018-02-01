@@ -9,5 +9,9 @@ main {
 }
 
 .page-footer {
-  background: #ffca28 !important;
+  background: #757163 !important;
+}
+
+.change {
+  color: white !important;
 }
