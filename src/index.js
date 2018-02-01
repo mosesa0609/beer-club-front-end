@@ -9,12 +9,8 @@ import Footer from '../src/components/Footer'
 
 ReactDOM.render(
   <div>
-    {/* <Router> */}
     <Header />
-    {/* </Router>
-  <Router> */}
     <Footer />
-    {/* </Router> */}
   </div>
 , document.getElementById('root'))
 registerServiceWorker()
