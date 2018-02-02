@@ -1,7 +1,23 @@
 import React, {Component} from 'react'
+// import {Link} from 'react-router-dom'
+// import axios from 'axios'
 // import Header from './Header'
 
 class Search extends Component {
+  // constructor (props) {
+  //   super(props)
+  //   this.state = {
+  //     search: '',
+  //     searchedResults: {}
+  //   }
+  // }
+
+  // handleSearchInput (e) {
+  //   this.setState({
+  //     search: e.target.value
+  //   })
+  // }
+
   constructor (props) {
     super(props)
     this.handleSearchInput = this.handleSearchInput.bind(this)
@@ -9,6 +25,7 @@ class Search extends Component {
   }
 
   handleSearchInput (e) {
+    console.log(e)
     this.props.handleSearchInput(e.target.value)
   }
 
@@ -20,20 +37,17 @@ class Search extends Component {
   render () {
     return (
       <div>
-        {/* <Header /> */}
-        {/* <div class='nav-wrapper centered'>
-          <form onSubmit={this.onSubmitQuery}>
-            <div class='input-field'>
-              <input id='search'
-                placeholder="How 'bout a beer?"
-                value={this.props.query}
-                onChange={this.handleSearchInput}
-                type='search' required />
-              <label class='label-icon' for='search'><i class='material-icons'>search</i></label>
-              <i class='material-icons'>close</i>
+        <div className='nav-wrapper '>
+          <form style={{height: 50}} className='' onSubmit={this.onSubmitQuery}>
+            <div className='input-field'>
+              <input id='search' type='search' placeholder="HOW 'BOUT A BEER?" value={this.props.query} onChange={this.handleSearchInput} name='beerName' />
+              <label className='label-icon' for='search'>
+                <i className='material-icons'>search</i>
+              </label>
+              <i className='material-icons'>close</i>
             </div>
           </form>
-        </div> */}
+        </div>
       </div>
     )
   }
