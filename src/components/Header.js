@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
-import {Navbar, NavItem} from 'react-materialize'
+import {Navbar, NavItem, Icon} from 'react-materialize'
 import {BrowserRouter as Router, Route, Link, Redirect, Switch} from 'react-router-dom'
 import '../styles/Header.css'
 import Landing from './Landing'
 import Shop from './Shop'
 import Register from './Register'
 import Container from './Container'
+import ShoppingCart from './ShoppingCart'
 // import InitialSearch from '../src/components/InitialSearch'
 
 // import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
@@ -53,12 +54,13 @@ class Header extends Component {
         <Router>
           <div>
             <div>
-              <Navbar className='page-header' brand='Dollar Beer Club' right style={{height: 120}}>
+              <Navbar className='page-header' id='sticky-nav' brand='Dollar Beer Club' right>
                 {/* <Container /> */}
                 <NavItem href='#'><div className=''><Link to='/'>Sign In</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/register'>Sign Up</Link></div></NavItem>
                 <NavItem href='#'><div className=''>About</div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/shop'>Crafted Beers</Link></div></NavItem>
+                <NavItem href='#'><div className=''><Link to='/cart'><Icon right>shopping_cart</Icon></Link></div></NavItem>
               </Navbar>
             </div>
 
@@ -67,7 +69,7 @@ class Header extends Component {
                 <Route path='/shop' component={Shop} />
                 <Route path='/logon' component={Shop} />
                 <Route path='/register' component={Register} />
-                {/* <Route path='/search/:name' component={Shop} /> */}
+                <Route path='/cart' component={ShoppingCart} />
                 <Route path='/' component={Landing} />
               </Switch>
             </div>

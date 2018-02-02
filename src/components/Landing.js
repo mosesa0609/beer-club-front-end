@@ -13,10 +13,10 @@ class Landing extends Component {
         <Parallax bgImage='https://images.pexels.com/photos/59150/pexels-photo-59150.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb' style={{height: 700, strength: 800 }}>
           <div>
             <div className=''>
-              <div className='black-text' style={{paddingLeft: 50, paddingRight: 50, paddingTop: 190, paddingBottom: 10, textAlign: 'center'}}>
-                <h4>YOUR #1 STOP FOR THE BEST IMPORTED/LOCAL BREWS </h4>
+              <div className='white-text' style={{paddingLeft: 50, paddingRight: 50, paddingTop: 190, paddingBottom: 10, textAlign: 'center'}}>
+                <h4>YOUR #1 STOP FOR THE BEST IMPORTED/LOCAL LAGERS </h4>
               </div>
-              <div className='black-text' style={{paddingLeft: 400, paddingRight: 400, textAlign: 'justify', fontSize: 16}}>
+              <div className='white-text ' style={{paddingLeft: 400, paddingRight: 400, textAlign: 'justify', fontSize: 16}}>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
               <Button waves='light' className='centered-landing-btn white'><Link to='/shop'>Get A Pint Today!</Link></Button>

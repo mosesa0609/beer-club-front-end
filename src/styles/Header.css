@@ -14,3 +14,6 @@
     transform: translate(-140%, 100%);
   background: black;
 }
+#sticky-nav {
+  position: relative;
+}
