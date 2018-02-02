@@ -12,6 +12,7 @@ import Billing from './Billing';
 import Login from './Login'
 import ShoppingCart from './ShoppingCart'
 import SignUp from './SignUp'
+import SuccessPage from './SuccessPage'
 
 // import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
@@ -52,6 +53,7 @@ class Header extends Component {
                 <Route path='/register' component={Register} />
                 <Route path='/about' component={About} />
                 <Route path='/cart' component={ShoppingCart} />
+                <Route path='/success' coponent={SuccessPage} />
                 <Route path='/' component={Landing} />
               </Switch>
             </div>

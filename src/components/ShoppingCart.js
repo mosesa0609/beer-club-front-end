@@ -7,6 +7,7 @@ import ShoppingCartItem from './ShoppingCartItem'
 // import Cart from './Cart'
 import { queryCart, queryBrewery } from './Utils'
 import { Button } from 'react-materialize'
+import {Link} from 'react-router-dom'
 
 class ShoppingCart extends Component {
   constructor (props) {
@@ -73,7 +74,7 @@ class ShoppingCart extends Component {
         <div>{beers}</div>
         <h1>Order Total: ${this.state.orderTotal}</h1>
         <div className='row'>
-          <Button className='red hoverable col s12 m2 offset-m5' waves='light' style={{display: 'inline'}} >Submit Order</Button>
+        <Link to='/success'><Button className='red hoverable col s12 m2 offset-m5' waves='light' style={{display: 'inline'}} >Submit Order</Button></Link>
         {/* <Shipping /> */}
         </div>
       </div>
