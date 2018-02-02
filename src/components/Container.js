@@ -46,6 +46,7 @@ class Container extends Component {
     return (
       <div>
         {searched ? <Results searchResults={this.state.searchResults} onSearchAgain={this.onSearchAgain} /> : <Search handleSearchInput={this.handleSearchInput} onSubmitQuery={this.onSubmitQuery} query={this.state.query} />}
+        
       </div>
     )
   }

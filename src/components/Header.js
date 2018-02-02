@@ -9,8 +9,8 @@ import Container from './Container'
 import '../script.js'
 import About from './About';
 import Billing from './Billing';
-// import ShoppingCart from './ShoppingCart'
-// import InitialSearch from '../src/components/InitialSearch'
+import Login from './Login'
+import ShoppingCart from './ShoppingCart'
 
 // import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
@@ -47,10 +47,10 @@ class Header extends Component {
             <div>
               <Switch>
                 <Route path='/shop' component={Shop} />
-                <Route path='/logon' component={Register} />
+                <Route path='/logon' component={Login} />
                 <Route path='/register' component={Register} />
                 <Route path='/about' component={About} />
-                {/* <Route path='/cart' component={ShoppingCart} /> */}
+                <Route path='/cart' component={ShoppingCart} />
                 <Route path='/' component={Landing} />
               </Switch>
             </div>
