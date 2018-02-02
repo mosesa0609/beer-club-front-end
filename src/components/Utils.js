@@ -11,3 +11,11 @@ export function queryBrewery (query) {
     return beers
   })
 }
+
+export function buyBeer (beer) {
+  axios
+    .post('http://localhost:4000/buy/' + beer)
+    .then(() => {
+      console.log('Beer added to cart')
+    })
+}

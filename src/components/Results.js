@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import { Card, CardTitle, Button } from 'react-materialize'
+import {buyBeer} from './Utils'
 
 class Results extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      dummyPic: 'https://stamandtrade.com/wp-content/uploads/2017/03/no-image-available.jpg'
+      dummyPic: 'https://stamandtrade.com/wp-content/uploads/2017/03/no-image-available.jpg',
+      isButtonDisabled: false
     }
     //this.onSearchAgain = this.onSearchAgain.bind(this)
   }
@@ -16,7 +18,14 @@ class Results extends Component {
   reloadApp(e) {
     window.location.reload(true);
     e.preventDefault();
-}
+  }
+  addToCart = (e, id) => {
+    e.preventDefault()
+    buyBeer(id)
+    this.setState({
+      isButtonDisabled: false
+    })
+  }
   // componentDidMount = () => {
   // axios
   //     .get()
@@ -39,7 +48,10 @@ class Results extends Component {
             <h5>ABV: {beer.abv}</h5>
           </div>
         ]}>
-        <Button floating className='red hoverable halfway-fab' waves='light' icon='add' style={{position: 'absolute', bottom: 90, right: 8}} />
+        <Button id={'btn_'+ beer.id} floating onClick={e =>this.addToCart(e, beer.id)} 
+        disabled={this.state.isButtonDisabled} 
+        className='red hoverable halfway-fab' waves='light' icon='add' 
+        style={{position: 'absolute', bottom: 90, right: 8}} />
       </Card>
     )
     })
