@@ -24,7 +24,7 @@ class Results extends Component {
     buyBeer(id)
     console.log(id)
     this.setState({
-      isButtonDisabled: true
+      isButtonDisabled: false
     })
   }
   
