@@ -27,7 +27,6 @@ The application was written in React
 
 
 ## Installation
-0. You have to use the the [Back-End](https://github.com/Gura-San/beer-club-backend) to proccess the requests
 1. Fork/Clone the repo
 2. ```$npm i``` to install the dependencies
 3. ```$npm start``` to run the server daemon, i.e. launch the server
