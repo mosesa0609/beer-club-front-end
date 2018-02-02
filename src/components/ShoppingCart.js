@@ -5,24 +5,25 @@ import React, {Component} from 'react'
 import Billing from './Billing'
 import ShoppingCartItem from './ShoppingCartItem'
 // import Cart from './Cart'
-import Utils from './Utils'
-import {getCart} from './Utils'
+import { queryCart, queryBrewery } from './Utils'
+import { Button } from 'react-materialize'
 
 class ShoppingCart extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      cartItems: {},
+      cartItems: [],
       orderTotal: 0,
-      orderNumber: uuid.v4()
+      orderNumber: uuid.v4(),
+      dummyPic: 'https://stamandtrade.com/wp-content/uploads/2017/03/no-image-available.jpg'
     }
   }
 
-  componentWillMount () {
-    let incomingItems = getCart()
-    this.setState = ({cartItems: incomingItems})
-    console.log(incomingItems)
-  }
+  // componentWillMount () {
+  //   let incomingItems = getCart()
+  //   this.setState = ({cartItems: incomingItems})
+  //   console.log(incomingItems)
+  // }
 
   calculateTotal () {
     // let newTotal = 0
@@ -31,7 +32,7 @@ class ShoppingCart extends Component {
     // //   console.log(newTotal)
     // })
     let newTotal = this.state.cartItems.reduce((sum, beer) => {
-      return sum += beer.bQt * beer.bPrice
+      return sum += beer.qnt * beer.price
     }, 0)
     this.setState(
       prevState => ({ orderTotal: newTotal }),
@@ -40,15 +41,19 @@ class ShoppingCart extends Component {
   }
 
   componentDidMount () {
-    this.calculateTotal()
     console.log(this.state.orderTotal)
+    queryCart().then((res) => {
+      this.setState({
+        cartItems: res
+      })
+    })
+    this.calculateTotal()
   }
 
   updateQuantity (e, currentIndex, newQt) {
     this.setState({
-
       cartItems: this.state.cartItems.map((item, idx) => {
-        if (idx === currentIndex) item.bQt = newQt
+        if (idx === currentIndex) item.qnt = newQt
         return item
       })
     }), () => console.log(this.state.orderTotal, currentIndex, newQt)
@@ -60,14 +65,14 @@ class ShoppingCart extends Component {
     console.log(this.state.cartItems)
     let beers = this.state.cartItems.map((beer, index) => {
       return (
-        <ShoppingCartItem onUpdate={this.updateQuantity.bind(this)} beer={beer} key={index} index={index} />
+        <ShoppingCartItem dummy={this.state.dummyPic} onUpdate={this.updateQuantity.bind(this)} beer={beer} key={index} index={index} />
       )
     })
     return (
       <div>
         <div>{beers}</div>
-        <h1>{this.state.orderTotal}</h1>
-        <Billing />
+        <h1>Order Total: ${this.state.orderTotal}</h1>
+        <Button className='red hoverable' waves='light' style={{display: 'inline'}} >Submit Order</Button>
         {/* <Shipping /> */}
       </div>
     )
