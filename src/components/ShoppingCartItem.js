@@ -62,22 +62,24 @@ class ShoppingCartItem extends Component {
 
     return (
       <div className='item-container'>
-        <Card
-          className='card hoverable col s12 m3'
-          header={<CardTitle reveal image={itemImg.labels ? itemImg.labels.medium : this.props.dummy}
-            waves='light' />}
-          title={<h5
-            className=''
-            style={{fontSize: 20}}> {itemName}   |   Quantity: {itemQuantity}   |   Subtotal: ${itemPrice * itemQuantity}</h5>}>
-          <ToggleDisplay show={this.state.show}>
-            <Input type='number' onChange={this.handleChange} />
-            <Button onClick={e => this.handleUpdateClick(e, itemId)} type='submit' >Change Quantity</Button>
-          </ToggleDisplay>
-          <Button onClick={() => this.handleClick()} floating className='red hoverable halfway-fab' waves='light' value='update order' style={{position: 'absolute', bottom: 90, right: 8}} >Update Order</Button>
-          <Button onPress={this.clearText} onClick={(e) => this.handleRemoveFromCart(e, itemId)} className='red hoverable' waves='light' style={{position: 'absolute', top: 50, left: 8}} >Remove from Cart</Button>
-        </Card>
+        {/* <div className='row'>  */}
+          <Card
+            className='card hoverable col s12 m4'
+            header={<CardTitle reveal image={itemImg.labels ? itemImg.labels.medium : this.props.dummy}
+              waves='light' />}
+            title={<h5
+              className=''
+              style={{fontSize: 20}}> {itemName}   |   Quantity: {itemQuantity}   |   Subtotal: ${itemPrice * itemQuantity}</h5>}>
+            <ToggleDisplay show={this.state.show}>
+              <Input type='number' onChange={this.handleChange} />
+              <Button onClick={e => this.handleUpdateClick(e, itemId)} type='submit' >Change Quantity</Button>
+            </ToggleDisplay>
+            <Button onClick={() => this.handleClick()} floating className='red hoverable halfway-fab' waves='light' value='update order' style={{position: 'absolute', bottom: 90, right: 8}} >Update Order</Button>
+            <Button onPress={this.clearText} onClick={(e) => this.handleRemoveFromCart(e, itemId)} className='red hoverable' waves='light' style={{position: 'absolute', top: 50, left: 8}} >Remove from Cart</Button>
+          </Card>
+        </div>
 
-      </div>
+      // </div>
     )
   }
 }
