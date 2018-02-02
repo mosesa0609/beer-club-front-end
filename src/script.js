@@ -1,3 +1,5 @@
-$(window).scroll(() => {
-  $('#sticky-nav').css('top', $(window).scrollTop())
+(function ($) {
+  $(window).scroll(() => {
+    $('#sticky-nav').css('top', $(window).scrollTop())
+  })
 })

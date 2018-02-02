@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Row, Input, Toast, Icon} from 'react-materialize'
+import {Row, Input, Button, Icon} from 'react-materialize'
 import '../styles/Register.css'
 
 class Register extends Component {
@@ -74,7 +74,7 @@ class Register extends Component {
                 <Input type='text' name='username' placeholder='Username' s={12} label='User Name' required />
                 <Input type='password' name='password' value={this.state.password} onChange={(e) => { this.passWord(e) }} label='Password' s={12} required />
                 <Input type='password' name='password' value={this.state.confirmPassword} onChange={(e) => { this.confirmPassword(e) }} label='Confirm Password' s={12} required />
-                <Toast waves='light' className='reg-button right' onClick={(e) => { this.onSubmit(e) }} toast={this.state.valid ? 'Valid' : 'In-Valid'} type='submit'>Register<Icon right>check</Icon></Toast>
+                <Button waves='light' className='reg-button right' onClick={(e) => { this.onSubmit(e) }} type='submit'>Register<Icon right>check</Icon></Button>
               </Row>
             </div>
           </div>

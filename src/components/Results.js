@@ -39,13 +39,13 @@ class Results extends Component {
     let beerKeg = searchResults.map((beer, index) => {
       console.log(beer)
       return (
-      <Card key={index} className='card hoverable col s12 m3' header={<CardTitle reveal image={beer.labels ? beer.labels.large : this.state.dummyPic} waves='light' />} title={<h5 className='' style={{fontSize: 20}}> {beer.name}</h5>}
+      <Card key={index} className='card hoverable col s12 m4' header={<CardTitle reveal image={beer.labels ? beer.labels.large : this.state.dummyPic} waves='light' />} title={<h5 className='' style={{fontSize: 20}}> {beer.name}</h5>}
         reveal={[
           <div>
             <h4>$7</h4>
-            <h5>Description: {beer.description}</h5>
-            <h5>Brew Style: {beer.style.name}</h5>
-            <h5>ABV: {beer.abv}</h5>
+            <p>Description: {beer.description}</p>
+            <p>Brew Style: {beer.style.name}</p>
+            <p>ABV: {beer.abv}</p>
           </div>
         ]}>
         <Button id={'btn_'+ beer.id} floating onClick={e =>this.addToCart(e, beer.id)} 
@@ -60,8 +60,9 @@ class Results extends Component {
         
         {/* <Button waves='light' className='centered-landing-btn white'onClick={this.onSearchAgain}>Search For Another</Button> */}
       <div className='row'>
+      <div className='center-align'>
       <Button type='button' onClick={this.reloadApp}>Search For Another</Button>
-      
+      </div>
         {beerKeg}
       </div>
       </div>

@@ -19,3 +19,7 @@ export function buyBeer (beer) {
       console.log('Beer added to cart')
     })
 }
+
+export function getCart (beer) {
+
+}

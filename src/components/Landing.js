@@ -10,16 +10,16 @@ class Landing extends Component {
     return (
       <div>
         {/* Using Parallax to add a seamless style */}
-        <Parallax bgImage='https://images.pexels.com/photos/59150/pexels-photo-59150.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb' style={{height: 700, strength: 800 }}>
+        <Parallax bgImage='https://images.unsplash.com/photo-1513189737554-b1bbd839b9a3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0d095f47eceee279bec773f9493f5ff4&auto=format&fit=crop&w=1050&q=80' style={{height: 700, strength: 800}} >
           <div>
             <div className=''>
-              <div className='white-text' style={{paddingLeft: 50, paddingRight: 50, paddingTop: 190, paddingBottom: 10, textAlign: 'center'}}>
-                <h4>YOUR #1 STOP FOR THE BEST IMPORTED/LOCAL LAGERS </h4>
+              <div className='white-text text-shadow' style={{paddingLeft: 50, paddingRight: 50, paddingTop: 100, paddingBottom: 10, textAlign: 'center', fontFamily: 'Yanone Kaffeesatz', fontWeight: 'lighter'}}>
+                <h1>YOUR #1 STOP FOR THE BEST IMPORTED/LOCAL LAGERS </h1>
               </div>
-              <div className='white-text ' style={{paddingLeft: 400, paddingRight: 400, textAlign: 'justify', fontSize: 16}}>
+              <div className='white-text text-shadow' style={{paddingLeft: 400, paddingRight: 400, textAlign: 'justify', fontSize: 25, fontFamily: 'Yanone Kaffeesatz', fontWeight: 300}}>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
-              <Button waves='light' className='centered-landing-btn white'><Link to='/shop'>Get A Pint Today!</Link></Button>
+              <Button waves='light' className='centered-landing-btn gray' style={{fontFamily: 'Yanone Kaffeesatz', fontSize: 25}}><Link to='/shop'>Get A Pint Today!</Link></Button>
             </div>
           </div>
         </Parallax>

@@ -6,7 +6,10 @@ import Landing from './Landing'
 import Shop from './Shop'
 import Register from './Register'
 import Container from './Container'
-import ShoppingCart from './ShoppingCart'
+import '../script.js'
+import About from './About';
+import Billing from './Billing';
+// import ShoppingCart from './ShoppingCart'
 // import InitialSearch from '../src/components/InitialSearch'
 
 // import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
@@ -23,30 +26,7 @@ class Header extends Component {
   updateSearchTerm = (search) => {
     this.setState({search})
   }
-  // constructor (props) {
-  //   super(props)
-  //   this.state = {
-  //     firstVisit: false
-  //   }
-  // }
-
-  // constructor (props) {
-  //   super(props)
-  //   this.state = {
-  //     search: '',
-  //     searchedResults: {}
-  //   }
-  // }
-
-  // handleSearch (e) {
-  //   this.setState({
-  //     search: e.target.value
-  //   })
-  // }
-
-  // searchedContent (e) {
-  //   e.preventDefault()
-  // }
+  
 
   render () {
     return (
@@ -54,11 +34,11 @@ class Header extends Component {
         <Router>
           <div>
             <div>
-              <Navbar className='page-header' id='sticky-nav' brand='Dollar Beer Club' right>
+              <Navbar className='page-header' id='sticky-nav' brand='Dollar Beer Club' right style={{fontFamily: 'Yanone Kaffeesatz', fontWeight: 'lighter'}}>
                 {/* <Container /> */}
-                <NavItem href='#'><div className=''><Link to='/'>Sign In</Link></div></NavItem>
+                <NavItem href='#'><div className=''><Link to='/register'>Sign In</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/register'>Sign Up</Link></div></NavItem>
-                <NavItem href='#'><div className=''>About</div></NavItem>
+                <NavItem href='#'><div className=''><Link to='/about'>About</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/shop'>Crafted Beers</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/cart'><Icon right>shopping_cart</Icon></Link></div></NavItem>
               </Navbar>
@@ -67,9 +47,10 @@ class Header extends Component {
             <div>
               <Switch>
                 <Route path='/shop' component={Shop} />
-                <Route path='/logon' component={Shop} />
+                <Route path='/logon' component={Register} />
                 <Route path='/register' component={Register} />
-                <Route path='/cart' component={ShoppingCart} />
+                <Route path='/about' component={About} />
+                {/* <Route path='/cart' component={ShoppingCart} /> */}
                 <Route path='/' component={Landing} />
               </Switch>
             </div>
