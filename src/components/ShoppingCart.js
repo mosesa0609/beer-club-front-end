@@ -6,6 +6,8 @@ import Billing from './Billing'
 import ShoppingCartItem from './ShoppingCartItem'
 // import Cart from './Cart'
 import Utils from './Utils'
+import '../styles/ShoppingCart.css'
+import {Button} from 'react-materialize'
 
 class ShoppingCart extends Component {
   constructor (props) {
@@ -77,7 +79,10 @@ class ShoppingCart extends Component {
     return (
       <div>
         <div>{beers}</div>
-        <h1>{this.state.orderTotal}</h1>
+        <h1>Order Total: ${this.state.orderTotal}</h1>
+        <Button className='#ff8f00 amber darken-3' type='submit' >Checkout</Button>
+        
+        {/* both of those components need to be routed to from this page */}
         <Billing />
         {/* <Shipping /> */}
       </div>

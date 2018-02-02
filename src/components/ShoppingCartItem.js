@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { CardTitle, Card, Button, Input } from 'react-materialize'
+import { CardTitle, Card, Button, Input, Col } from 'react-materialize'
 import '../styles/ShoppingCartItem.css'
 import ToggleDisplay from 'react-toggle-display'
 
