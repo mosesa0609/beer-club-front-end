@@ -11,6 +11,7 @@ import About from './About';
 import Billing from './Billing';
 import Login from './Login'
 import ShoppingCart from './ShoppingCart'
+import SignUp from './SignUp'
 
 // import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
@@ -36,7 +37,7 @@ class Header extends Component {
             <div>
               <Navbar className='page-header' id='sticky-nav' brand='Dollar Beer Club' right style={{fontFamily: 'Yanone Kaffeesatz', fontWeight: 'lighter'}}>
                 {/* <Container /> */}
-                <NavItem href='#'><div className=''><Link to='/register'>Sign In</Link></div></NavItem>
+                <NavItem href='#'><div className=''><Link to='/logon'>Sign In</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/register'>Sign Up</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/about'>About</Link></div></NavItem>
                 <NavItem href='#'><div className=''><Link to='/shop'>Crafted Beers</Link></div></NavItem>
@@ -47,7 +48,7 @@ class Header extends Component {
             <div>
               <Switch>
                 <Route path='/shop' component={Shop} />
-                <Route path='/logon' component={Login} />
+                <Route path='/logon' component={SignUp} />
                 <Route path='/register' component={Register} />
                 <Route path='/about' component={About} />
                 <Route path='/cart' component={ShoppingCart} />
