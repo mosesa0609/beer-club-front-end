@@ -9,10 +9,6 @@ import registerServiceWorker from './registerServiceWorker'
 
 ReactDOM.render(
   <div>
-<<<<<<< HEAD
-    <Header />
-    <Footer />
-=======
     <Router>
       <App />
     </Router>
@@ -23,7 +19,6 @@ ReactDOM.render(
     <footer>
       <Footer />
     </footer> */}
->>>>>>> register-page-alonzo
   </div>
 , document.getElementById('root'))
 registerServiceWorker()
