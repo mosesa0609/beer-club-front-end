@@ -22,10 +22,12 @@ class Results extends Component {
   addToCart = (e, id) => {
     e.preventDefault()
     buyBeer(id)
+    console.log(id)
     this.setState({
-      isButtonDisabled: false
+      isButtonDisabled: true
     })
   }
+  
   // componentDidMount = () => {
   // axios
   //     .get()
@@ -37,18 +39,18 @@ class Results extends Component {
   render () {
     let {searchResults} = this.props
     let beerKeg = searchResults.map((beer, index) => {
-      console.log(beer)
+      
       return (
-      <Card key={index} className='card hoverable col s12 m4' header={<CardTitle reveal image={beer.labels ? beer.labels.large : this.state.dummyPic} waves='light' />} title={<h5 className='' style={{fontSize: 20}}> {beer.name}</h5>}
+      <Card key={beer.id} className='card hoverable col s12 m3' header={<CardTitle reveal image={beer.labels ? beer.labels.medium : this.state.dummyPic} waves='light' />} title={<h6 className='' style={{fontSize: 15}}> {beer.name}</h6>}
         reveal={[
           <div>
-            <h4>$7</h4>
+            <p>$7</p>
             <p>Description: {beer.description}</p>
             <p>Brew Style: {beer.style.name}</p>
             <p>ABV: {beer.abv}</p>
           </div>
         ]}>
-        <Button id={'btn_'+ beer.id} floating onClick={e =>this.addToCart(e, beer.id)} 
+        <Button id={'beer_' + beer._id} floating onClick={e =>this.addToCart(e, beer.id)} 
         disabled={this.state.isButtonDisabled} 
         className='red hoverable halfway-fab' waves='light' icon='add' 
         style={{position: 'absolute', bottom: 90, right: 8}} />

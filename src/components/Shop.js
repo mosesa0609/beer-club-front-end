@@ -9,6 +9,15 @@ class Shop extends Component {
       <div className=''>
         <div>
           <Container />
+          <div>
+            <div style={{
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: '40vh'}} />
+          </div>
         </div>
       </div>
     )
