@@ -61,6 +61,7 @@ class Results extends Component {
         {/* <Button waves='light' className='centered-landing-btn white'onClick={this.onSearchAgain}>Search For Another</Button> */}
       <div className='row'>
       <Button type='button' onClick={this.reloadApp}>Search For Another</Button>
+      
         {beerKeg}
       </div>
       </div>
