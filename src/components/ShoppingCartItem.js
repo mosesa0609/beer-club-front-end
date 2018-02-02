@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { CardTitle, Card, Button, Input } from 'react-materialize'
 import '../styles/ShoppingCartItem.css'
 import ToggleDisplay from 'react-toggle-display'
-import { deleteItemFromCart } from './Utils'
+import { deleteItemFromCart, updateCartItemQuantity } from './Utils'
 
 class ShoppingCartItem extends Component {
   constructor (props) {
@@ -50,7 +50,7 @@ class ShoppingCartItem extends Component {
       show: !this.state.show
     })
     this.props.onUpdate(e, this.props.index, this.state.inputValue)
-    
+    updateCartItemQuantity(this.state.inputValue, id)
   }
 
   render () {

@@ -45,18 +45,17 @@ class ShoppingCart extends Component {
   }
 
   componentDidMount () {
-    this.calculateTotal()
     console.log(this.state.orderTotal)
     queryCart().then((res) => {
       this.setState({
         cartItems: res
       })
     })
+    this.calculateTotal()
   }
 
   updateQuantity (e, currentIndex, newQt) {
     this.setState({
-
       cartItems: this.state.cartItems.map((item, idx) => {
         if (idx === currentIndex) item.qnt = newQt
         return item
@@ -78,7 +77,6 @@ class ShoppingCart extends Component {
         <div>{beers}</div>
         <h1>Order Total: ${this.state.orderTotal}</h1>
         <Button className='red hoverable' waves='light' style={{display: 'inline'}} >Submit Order</Button>
-        <Billing />
         {/* <Shipping /> */}
       </div>
     )

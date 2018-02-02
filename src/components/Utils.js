@@ -32,7 +32,8 @@ export function deleteItemFromCart (id) {
     })
 }
 
-export function updateCartItemQuantity (id, qnt) {
+export function updateCartItemQuantity (qnt, id) {
+  console.log({qnt})
   axios
     .put(`https://dbc-project3-backend.herokuapp.com/cart/update/` + id, qnt)
     .catch(err => {
