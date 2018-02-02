@@ -41,21 +41,17 @@ class ShoppingCartItem extends Component {
     this.props.onUpdate(e, this.props.index, this.state.inputValue)
   }
 
-  // onClick () {
-  //   this.props.addItem()
-  // }
-
   render () {
-    let itemName = this.props.beer.bName
-    let itemImg = this.props.beer.bPic
-    let itemPrice = this.props.beer.bPrice
-    let itemQuantity = this.props.beer.bQt
+    let itemName = this.props.beer.name
+    let itemImg = this.props.beer
+    let itemPrice = this.props.beer.price
+    let itemQuantity = this.props.beer.qnt
 
     return (
       <div className='item-container'>
         <Card
           className='card hoverable col s12 m3'
-          header={<CardTitle reveal image={itemImg}
+          header={<CardTitle reveal image={itemImg.labels ? itemImg.labels.medium : this.props.dummy}
             waves='light' />}
           title={<h5
             className=''
