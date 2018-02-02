@@ -23,3 +23,19 @@ export function queryCart () {
     return shoppingCart
   })
 }
+
+export function deleteItemFromCart (id) {
+  axios
+    .delete(`https://dbc-project3-backend.herokuapp.com/cart/remove/` + id)
+    .then(() => {
+      console.log('Beer removed from cart')
+    })
+}
+
+export function updateCartItemQuantity (id, qnt) {
+  axios
+    .put(`https://dbc-project3-backend.herokuapp.com/cart/update/` + id, qnt)
+    .catch(err => {
+      console.log(err)
+    })
+}

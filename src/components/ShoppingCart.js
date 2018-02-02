@@ -6,7 +6,7 @@ import Billing from './Billing'
 import ShoppingCartItem from './ShoppingCartItem'
 // import Cart from './Cart'
 import { queryCart, queryBrewery } from './Utils'
-import axios from 'axios'
+import { Button } from 'react-materialize'
 
 class ShoppingCart extends Component {
   constructor (props) {
@@ -76,7 +76,8 @@ class ShoppingCart extends Component {
     return (
       <div>
         <div>{beers}</div>
-        <h1>{this.state.orderTotal}</h1>
+        <h1>Order Total: ${this.state.orderTotal}</h1>
+        <Button className='red hoverable' waves='light' style={{display: 'inline'}} >Submit Order</Button>
         <Billing />
         {/* <Shipping /> */}
       </div>
