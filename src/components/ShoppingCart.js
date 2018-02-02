@@ -6,35 +6,23 @@ import Billing from './Billing'
 import ShoppingCartItem from './ShoppingCartItem'
 // import Cart from './Cart'
 import Utils from './Utils'
+import {getCart} from './Utils'
 
 class ShoppingCart extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      cartItems: [
-
-        {
-          'bName': '3rd Stone Apricot Sour Ale',
-          'bQt': '1',
-          'bPrice': 7,
-          'bPic': 'https://i.imgur.com/S2SXqLn.png'
-        },
-        {
-          'bName': 'Almanac Golden Gates Gose',
-          'bQt': '1',
-          'bPrice': 7,
-          'bPic': 'https://i.imgur.com/7wC8RUG.png'
-        }
-      ],
+      cartItems: {},
       orderTotal: 0,
       orderNumber: uuid.v4()
     }
   }
 
-  // componentWillMount () {
-  //   let incomingItems = this.queryCart()
-  //   this.setState = ({cartItems: incomingItems})
-  // }
+  componentWillMount () {
+    let incomingItems = getCart()
+    this.setState = ({cartItems: incomingItems})
+    console.log(incomingItems)
+  }
 
   calculateTotal () {
     // let newTotal = 0
@@ -69,6 +57,7 @@ class ShoppingCart extends Component {
 
   //
   render () {
+    console.log(this.state.cartItems)
     let beers = this.state.cartItems.map((beer, index) => {
       return (
         <ShoppingCartItem onUpdate={this.updateQuantity.bind(this)} beer={beer} key={index} index={index} />

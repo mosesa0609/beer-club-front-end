@@ -27,16 +27,18 @@ class Billing extends Component {
 
   render () {
     return (
-      <div className='billing-container'>
-        <Card className='#ffca28 amber lighten-5' actions={[<a href='#'>Go Back</a>]}>
-          <h3>Billing Info</h3>
-          <Row>
-            <Input onChange={this.handleChange} type='text' name='creditCard' placeholder='Credit Card Number' />
-            <Input onChange={this.handleChange} type='text' name='expiration' placeholder='Expiration Date MM/YY' />
-            <Input onChange={this.handleChange} type='text' name='cvc' placeholder='CVC' />
-            <Button className='#ff8f00 amber darken-3' type='submit'>Submit Payment</Button>
-          </Row>
-        </Card>
+      <div className='bgImg'>
+        <div className='billing-container' style={{fontFamily: 'Yanone Kaffeesatz', fontWeight: 300, fontSize: 20}}>
+          <Card className='bg_color' actions={[<a style={{color: 'black'}} href='#'>Go Back</a>]}>
+            <h3 className='black-text'>Billing Info</h3>
+            <Row>
+              <Input onChange={this.handleChange} type='text' name='creditCard' placeholder='Credit Card Number' />
+              <Input onChange={this.handleChange} type='text' name='expiration' placeholder='Expiration Date MM/YY' />
+              <Input onChange={this.handleChange} type='text' name='cvc' placeholder='CVC' />
+              <Button className='#00695c teal darken-3' style={{marginTop: 30}}type='submit'>Submit Payment</Button>
+            </Row>
+          </Card>
+        </div>
       </div>
     )
   }

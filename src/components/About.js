@@ -1,25 +1,25 @@
 import React, {Component} from 'react'
-import { Parallax } from 'react-parallax'
-import '../styles/Landing.css'
+import {Carousel} from 'react-materialize'
+import '../styles/About.css'
 
 class About extends Component {
-    render () {
-        return(
-            <div>
-                {/* Current image is being used as a placeholder. A designed image will be needed for this section */}
-                <Parallax className='' bgImage='https://images.unsplash.com/photo-1505048492-d86bb810c2a4?ixlib=rb-0.3.5&s=9a0341413e88bf9246316904dfa4be16&auto=format&fit=crop&w=1500&q=80' style={{height: 500}}>
-                <div>
-                    <div className='white-text' style={{paddingLeft: 50, paddingRight: 50, paddingTop: 120, paddingBottom: 10, textAlign: 'center'}}>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                    </div>
-                    <div className='white-text' style={{paddingLeft: 400, paddingRight: 400, textAlign: 'justify', fontSize: 16}}>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-                </Parallax>
-            </div>
-        )
-    }
+  render () {
+    return (
+      <div className='bgImg_about'>
+
+        <div className='container'>
+          <h1 className='white-text center' style={{fontFamily: 'Yanone Kaffeesatz', fontWeight: 'lighter', marginBottom: -80}} >MEET THE FOUNDERS</h1>
+          <Carousel images={[
+            'https://git.generalassemb.ly/avatars/u/8736?s=400',
+            'https://avatars3.githubusercontent.com/u/33813562?v=4',
+            'https://avatars3.githubusercontent.com/u/20568762?v=4',
+            'https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAz9AAAAJDc3MWZlNzY3LWM2OTgtNGQ0ZC04MDQxLWZkNGMzMzNhMzFjMw.jpg'
+          ]} />
+          <p className='white-text center' style={{fontFamily: 'Yanone Kaffeesatz', fontWeight: 'lighter', fontSize: 40, marginTop: -60}}>Sandro Guraspasvili - Julian Addison - Marquet Reid - Alonzo Moses</p>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default About
