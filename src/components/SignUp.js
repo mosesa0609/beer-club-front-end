@@ -70,7 +70,7 @@ class Signup extends Component {
               <Row className='#f5f5f5 grey lighten-4' style={{padding: 30}}>
                 <Input type='email' name='email' label='Email' s={12} required />
                 <Input type='password' name='password' value={this.state.password} onChange={(e) => { this.passWord(e) }} label='Password' s={12} required />
-                <Button waves='light' className='reg-button right' onClick={(e) => { this.onSubmit(e) }} type='submit'>Register<Icon right>check</Icon></Button>
+                <Button waves='light' className='reg-button right' onClick={(e) => { this.onSubmit(e) }} type='submit'>Login<Icon right>check</Icon></Button>
               </Row>
             </div>
           </div>

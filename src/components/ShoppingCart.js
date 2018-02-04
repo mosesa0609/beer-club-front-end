@@ -74,8 +74,8 @@ class ShoppingCart extends Component {
         <div>{beers}</div>
         <h1>Order Total: ${this.state.orderTotal}</h1>
         <div className='row'>
-        <Link to='/success'><Button className='red hoverable col s12 m2 offset-m5' waves='light' style={{display: 'inline'}} >Submit Order</Button></Link>
-        {/* <Shipping /> */}
+          <Link to='/success'><Button className='red hoverable col s12 m2 offset-m5' waves='light' style={{display: 'inline'}} >Submit Order</Button></Link>
+          {/* <Shipping /> */}
         </div>
       </div>
     )
